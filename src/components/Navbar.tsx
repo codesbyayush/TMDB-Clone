@@ -5,7 +5,7 @@ const Navbar = () => {
   return (
     
 <nav className="bg-primaryDark ">
-  <div className="flex justify-between items-center px-4 py-6 text-white font-semibold mx-auto max-w-6xl">
+  <div className="flex justify-between items-center px-4 py-6 text-white font-semibold mx-auto max-w-[61rem]">
   <div className="flex  gap-6 items-center ">
     <Link href='/'>
   <Image 
@@ -17,11 +17,13 @@ const Navbar = () => {
     priority
   />
   </Link>
-  <Link href='/movie' className="hidden sm:block">Movie</Link>
-  <Link href='/tvshow' className="hidden sm:block">TV Shows</Link>
-  <Link href='/people' className="hidden sm:block">People</Link>
   </div>
-  <button> Search </button>
+  <div className="flex gap-6 sm:px-10">
+  <Link href='/movie' className="hidden mxs:block">Movie</Link>
+  <Link href='/tvshow' className="hidden mxs:block">TV Shows</Link>
+  <Link href='/people' className="hidden mxs:block">People</Link>
+  </div>
+  {/* <button> Search </button> */}
   </div>
 </nav>
 

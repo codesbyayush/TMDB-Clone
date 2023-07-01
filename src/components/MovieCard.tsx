@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import React from 'react'
 
 type Props = {
@@ -8,11 +9,13 @@ type Props = {
   first_air_date:string,
   release_date: string,
   id: number,
+  type: string 
 }
 
-const MovieCard = ({poster_path, first_air_date, name, title, release_date } :  Props) => {
+const MovieCard = ({poster_path, first_air_date, name, title, release_date, id, type} :  Props) => {
   return (
     <div className='w-[160px] rounded-lg overflow-hidden'>
+     <Link href={`/${(type) === 'tv' ? 'tvshow' : 'movie'}/${id}`}>
         <Image 
             src={`https://image.tmdb.org/t/p/w185${poster_path}`}
             height={330}
@@ -23,6 +26,7 @@ const MovieCard = ({poster_path, first_air_date, name, title, release_date } :  
         />
         <h3 className='font-bold'>{name || title}</h3>
         <p>{first_air_date || release_date}</p>
+        </Link>
     </div>
   )
 }

@@ -29,8 +29,9 @@ const Popular = async () => {
                     first_air_date:string,
                     release_date: string,
                     id: number,
+                    media_type: string
                 }) => (
-                    <MovieCard {...item} key={item.id}/>
+                    <MovieCard type={item.media_type} {...item} key={item.id}/>
                 ))}
             </div>
         </section>

@@ -5,7 +5,7 @@ import FooterColumns from './FooterColumns'
 
 const Footer = () => {
   return (
-    <footer className='w-full pt-20 pb-24 flex flex-col lg:flex-row items-center justify-evenly bg-primaryDark text-white gap-10 lg:gap-0'>
+    <footer className='w-full pt-20 pb-24 flex flex-col lg:flex-row items-center justify-evenly bg-primaryDark text-white gap-10 lg:gap-0 px-6'>
         <Image 
             src='/logo2.svg'
             height={130}

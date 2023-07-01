@@ -32,7 +32,7 @@ const Page = async () => {
                       release_date: string,
                       id: number,
                   }) => (
-                      <MovieCard {...item} key={item.id}/>
+                      <MovieCard type={'tv'} {...item} key={item.id}/>
                   ))}
               </div>
           </section>
