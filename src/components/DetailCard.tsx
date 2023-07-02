@@ -32,7 +32,7 @@ const DetailCard = ({ poster_path,
 } :  Props) => {
 
   return (
-    <div className='flex flex-col sm:flex-row gap-8 p-8 max-w-6xl mx-auto'>
+    <div className='flex flex-col sm:flex-row gap-8 p-8 max-w-5xl mx-auto sm:items-center'>
 
         <div className='min-w-fit h-auto'>
 
@@ -41,7 +41,7 @@ const DetailCard = ({ poster_path,
                 height={450}
                 width={300}
                 alt='Movie Image'
-                className='rounded-lg w-full sm:w-72 h-auto '
+                className='rounded-lg w-full sm:w-72 h-auto'
                 priority
             />
             {/* {networks &&  <div className=''>

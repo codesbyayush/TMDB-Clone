@@ -22,8 +22,8 @@ const Page = async () => {
       
       
         return data && (
-          <section className="bg-tertiaryGreen bg-opacity-10 custom-scrollbars">
-              <div className="flex gap-6 overflow-x-scroll custom-scrollbars justify-center flex-wrap sm:px-8 sm:py-8 px-2 py-8 max-w-5xl mx-auto">
+          <section className="bg-tertiaryGreen bg-opacity-10 custom-scrollbars ">
+              <div className="flex gap-6 overflow-x-scroll custom-scrollbars justify-center flex-wrap sm:px-8 px-2 py-8 max-w-5xl mx-auto">
                   {data.map((item : {
                       poster_path: string,
                       name:string,
