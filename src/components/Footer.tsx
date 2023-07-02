@@ -5,7 +5,9 @@ import FooterColumns from './FooterColumns'
 
 const Footer = () => {
   return (
-    <footer className='w-full pt-20 pb-24 flex flex-col lg:flex-row items-center justify-evenly bg-primaryDark text-white gap-10 lg:gap-0 px-6'>
+    <footer className='w-full pt-20 pb-24 flex flex-col lg:flex-row items-center justify-evenly bg-primaryDark text-white gap-10 lg:gap-0 px-6 relative'>
+      <p className='absolute text-importantLink mx-auto bottom-6 text-lg'>
+        ❗All links point to the actual TMDB website</p>
         <Image 
             src='/logo2.svg'
             height={130}
@@ -15,7 +17,7 @@ const Footer = () => {
         />
         <nav className='grid grid-cols-2 sm:grid-cols-4 gap-6'>
             {links.map( link => (
-                <FooterColumns cateogary={link[0][0]}   options={link[1]}/>
+                <FooterColumns cateogary={link[0][0]} options={link[1]}/>
             ))}
         </nav>
     </footer>

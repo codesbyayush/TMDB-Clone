@@ -20,7 +20,8 @@ module.exports = {
       secondaryBlue: ' #01b4e4',
       tertiaryGreen: '#90cea1',
       black: '#000',
-      white: '#fff'
+      white: '#fff',
+      importantLink: '#ff0000'
     },
     extend: {
       backgroundImage: {

@@ -2,8 +2,8 @@ import Link from 'next/link'
 import React from 'react'
 
 type Props = {
-    cateogary: string,
-    options: Array<string>
+    cateogary: string | Array<string>,
+    options: Array<Array<string>> | Array<string>
 }
 
 const FooterColumns = ({ cateogary , options }: Props) => {
@@ -14,8 +14,8 @@ const FooterColumns = ({ cateogary , options }: Props) => {
         </h1>
         <section className='flex flex-col gap-1'>
         {options.map(option => (
-            <Link href={'/'} className='font-semibold leading-5'>
-                {option}
+            <Link href={option[1]} className='font-semibold leading-5'>
+                {option[0]}
             </Link>
         ))}
         </section>
