@@ -3,8 +3,8 @@ import MovieCard from "./MovieCard";
 
 const Popular = async () => {
     
-    const dataRaw = await fetchData("movie/popular",1, 1)
-    const data = dataRaw.results
+    const data = await fetchData("movie/popular",1, 1)
+            .then(dataRaw => dataRaw.results)
     
       return  data && (
         <section className="bg-tertiaryGreen bg-opacity-20 custom-scrollbars pb-12">

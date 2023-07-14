@@ -5,8 +5,8 @@ import MovieCard from "./MovieCard";
 
 const Trending = async () => {
     
-    const dataRaw = await fetchData("trending/all/day",0, 1)
-    const data = dataRaw.results
+    const data = await fetchData("trending/all/day",0, 1)
+            .then(dataRaw => dataRaw.results)
     
       return data && (
         <section className="bg-tertiaryGreen bg-opacity-20 ">
