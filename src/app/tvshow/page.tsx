@@ -19,7 +19,7 @@ const Page = () => {
                       .then(res => res.json())
     if(page == fetchRes.total_results) setEnd(true);
     const data = fetchRes.results;
-        setData(data);
+    if(data) setData(data);
         setLoading(false);
   }
 

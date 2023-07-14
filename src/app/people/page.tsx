@@ -15,8 +15,8 @@ const Page = () => {
                       .then(res => res.json())
     if(page == fetchRes.total_results) setEnd(true);
     const data = fetchRes.results;
-        setData(data);
-        setLoading(false);
+    if(data) setData(data);
+    setLoading(false);
   }
 
   const nextPage = (event: React.MouseEvent<HTMLElement>) => {
@@ -38,7 +38,7 @@ const Page = () => {
 
   },[page])
       
-        return (
+        return !loading && (
           <section className="bg-tertiaryGreen bg-opacity-10 custom-scrollbars">
               <div className="flex gap-6 overflow-x-scroll custom-scrollbars justify-center flex-wrap sm:px-8  px-2 py-8 max-w-5xl mx-auto">
                   {data.map((item : {
