@@ -5,7 +5,8 @@ import FooterColumns from './FooterColumns'
 
 const Footer = () => {
   return (
-    <footer className='w-full pt-20 pb-24 flex flex-col lg:flex-row items-center justify-evenly bg-primaryDark text-white gap-10 lg:gap-0 px-6 relative'>
+    <footer className='w-full bg-primaryDark'>
+      <div className='max-w-[120rem] pt-20 pb-24 flex flex-col lg:flex-row items-center justify-evenly  text-white gap-10 lg:gap-0 px-6 relative mx-auto'>
       <p className='absolute text-importantLink mx-auto bottom-6 text-lg'>
         ❗All links point to the actual TMDB website</p>
         <Image 
@@ -20,6 +21,7 @@ const Footer = () => {
                 <FooterColumns cateogary={link[0][0]} options={link[1]}/>
             ))}
         </nav>
+        </div>
     </footer>
   )
 }

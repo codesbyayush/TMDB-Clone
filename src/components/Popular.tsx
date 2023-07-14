@@ -1,24 +1,12 @@
+import fetchData from "@/utils/fetchdata";
 import MovieCard from "./MovieCard";
 
 const Popular = async () => {
     
-    const url = 'https://api.themoviedb.org/3/movie/popular?language=en-US&page=1';
-    const options = {
-      method: 'GET',
-      headers: {
-        accept: 'application/json',
-        Authorization: `Bearer ${process.env.TMDB_API_TOKEN}`
-      }
-    };
+    const dataRaw = await fetchData("movie/popular",1, 1)
+    const data = dataRaw.results
     
-      const data = await fetch(url, options)
-      .then(res => res.json())
-        .then(function (response : any) {
-          return response.results;
-        })
-    
-    
-      return data && (
+      return  (
         <section className="bg-tertiaryGreen bg-opacity-20 custom-scrollbars pb-12">
                 <h2 className="font-semibold text-2xl tracking-wide pb-6 p-8">What's Popular</h2>
             <div className="grid grid-flow-col-dense gap-4 overflow-x-scroll custom-scrollbars px-8">

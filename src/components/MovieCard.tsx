@@ -13,6 +13,8 @@ type Props = {
 }
 
 const MovieCard = ({poster_path, first_air_date, name, title, release_date, id, type} :  Props) => {
+
+
   return (
     <div className='w-[160px] rounded-lg overflow-hidden'>
      <Link href={`/${(type) === 'tv' ? 'tvshow' : 'movie'}/${id}`}>

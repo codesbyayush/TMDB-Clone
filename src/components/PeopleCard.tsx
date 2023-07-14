@@ -19,7 +19,6 @@ const MovieCard = ({profile_path, name } :  Props) => {
             priority
         />
         <h3 className='font-bold'>{name}</h3>
-        <p>{}</p>
     </div>
   )
 }

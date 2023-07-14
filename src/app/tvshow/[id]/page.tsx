@@ -1,4 +1,5 @@
 import DetailCard from '@/components/DetailCard'
+import fetchData from '@/utils/fetchdata'
 import React from 'react'
 
 type props = {
@@ -26,17 +27,7 @@ type data = {
 
 const page = async ( {params} : props) => {
 
-  const url = `https://api.themoviedb.org/3/tv/${params.id}?language=en-US`;
-  const options = {
-    method: 'GET',
-    headers: {
-      accept: 'application/json',
-      Authorization: `Bearer ${process.env.TMDB_API_TOKEN}`
-    }
-  };
-  
-  const data = await fetch(url, options)
-    .then(res => res.json())
+  const data = await fetchData(`tv/${params.id}`)
 
 
   return (
