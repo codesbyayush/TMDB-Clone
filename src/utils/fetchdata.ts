@@ -11,7 +11,7 @@ const fetchData = async (path = "", page = 0, revalidate = 30) => {
         method: 'GET',
         headers: {
             accept: 'application/json',
-            Authorization: `Bearer ${process.env.NEXT_PUBLIC_TMDB_API_TOKEN}`
+            Authorization: `Bearer ${process.env.TMDB_API_TOKEN}`
         },
         next: {
             revalidate: 60*60*24*revalidate
