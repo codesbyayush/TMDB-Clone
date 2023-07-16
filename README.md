@@ -1,4 +1,4 @@
-This is a [Next.js](https://nextjs.org/) project deployed on Netlify [Live site link](https://tmdb-codesbyayush.netlify.app/).
+This is a [Next.js](https://nextjs.org/) project deployed on Netlify [Live site link](https://main--tmdb-codesbyayush.netlify.app/).
 
 ## Getting Started
 
