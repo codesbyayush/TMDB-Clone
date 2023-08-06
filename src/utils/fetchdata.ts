@@ -1,5 +1,7 @@
 import next from "next/types";
 
+export const revalidate = 3600;
+
 const fetchData = async (path = "", page = 0, revalidate = 30) => {
     let urlPage = ""
     if(page > 0){
@@ -14,7 +16,7 @@ const fetchData = async (path = "", page = 0, revalidate = 30) => {
             Authorization: `Bearer ${process.env.NEXT_PUBLIC_TMDB_API_TOKEN}`
         },
         next: {
-            revalidate: 60*60*24*revalidate
+            revalidate: 60*60*revalidate
         }
     };
 
